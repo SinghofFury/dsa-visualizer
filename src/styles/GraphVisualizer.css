@@ -1,0 +1,470 @@
+/* Graph Visualizer Component Styles */
+.graph-visualizer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 65vh minmax(auto, 35vh);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  color: #f8fafc;
+  position: relative;
+}
+
+/* Graph Container */
+.graph-container {
+  position: relative;
+  grid-row: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #1e293b;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.graph-canvas {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #0f172a;
+}
+
+/* Graph Algorithm Info Panel - Positioned to right side */
+.algorithm-info-panel {
+  position: absolute;
+  right: 15px;
+  top: 60px;
+  background-color: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(59, 130, 246, 0.5);
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 250px;
+  z-index: 10;
+  color: #f8fafc;
+  font-size: 0.9rem;
+}
+
+/* Overlay instructions */
+.graph-instructions {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: rgba(15, 23, 42, 0.9);
+  color: #f8fafc;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  pointer-events: none;
+  max-width: 350px;
+  z-index: 10;
+  border: 1px solid rgba(59, 130, 246, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.graph-instructions p {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f8fafc;
+}
+
+.graph-instructions i {
+  width: 20px;
+  text-align: center;
+  color: #3b82f6;
+}
+
+.mobile-tip {
+  background-color: rgba(245, 158, 11, 0.3);
+  padding: 5px 8px !important;
+  border-radius: 4px;
+  border-left: 3px solid #f59e0b;
+}
+
+.mobile-tip i {
+  color: #f59e0b !important;
+}
+
+/* Control Panel */
+.control-panel {
+  grid-row: 2;
+  padding: 10px 15px;
+  background-color: #1e293b;
+  overflow-y: auto;
+  border-top: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Fixed Controls Bar */
+.fixed-controls {
+  position: absolute;
+  top: 15px;
+  right: 57px;
+  display: flex;
+  gap: 8px;
+  background-color: rgba(15, 23, 42, 0.9);
+  padding: 8px;
+  border-radius: 8px;
+  z-index: 20;
+  border: 1px solid rgba(59, 130, 246, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Graph Controls */
+.graph-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+  align-items: flex-start;
+}
+
+.vertex-controls, .edge-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 10px;
+  background-color: #334155;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 100%;
+}
+
+.vertex-controls label, .edge-controls label {
+  margin-right: 5px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: #f8fafc;
+}
+
+.vertex-controls input[type="number"],
+.edge-controls input[type="number"] {
+  width: 60px;
+  padding: 6px 8px;
+  border: 1px solid #64748b;
+  background-color: #1e293b;
+  color: #f8fafc;
+  border-radius: 4px;
+}
+
+.show-weights {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 8px;
+  flex-wrap: nowrap;
+  color: #f8fafc;
+}
+
+.show-weights input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #3b82f6;
+}
+
+/* Algorithm Information */
+.algorithm-info {
+  background-color: #334155;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.algorithm-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #f8fafc;
+  font-size: 1.2rem;
+}
+
+.algorithm-info p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: #cbd5e1;
+}
+
+.algorithm-complexity {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.complexity-label {
+  font-weight: 500;
+  margin-right: 5px;
+  color: #f8fafc;
+}
+
+.complexity-value {
+  font-family: monospace;
+  background-color: #0f172a;
+  padding: 3px 6px;
+  border-radius: 3px;
+  overflow-x: auto;
+  max-width: 100%;
+  display: inline-block;
+  color: #3b82f6;
+}
+
+/* Step Details */
+.step-details {
+  background-color: #334155;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.step-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.step-number {
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  width: 100px;
+}
+
+.step-action {
+  background-color: #475569;
+  color: #f8fafc;
+  padding: 8px 11px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+
+.step-explanation {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  word-break: break-word;
+  color: #cbd5e1;
+}
+
+.step-tooltip {
+  font-style: italic;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  padding-top: 5px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animation Controls */
+.animation-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+/* Ensure buttons in fixed controls follow the standardized button system */
+.fixed-controls .btn {
+  height: 36px;
+  width: 36px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+/* Run algorithm button - ensure consistent size */
+.run-algorithm-btn {
+  min-width: 100px;
+  height: 38px;
+}
+
+/* Speed control */
+.speed-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* New organization styles */
+.graph-controls-container {
+  background-color: #334155;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.control-section-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #f8fafc;
+  font-weight: 500;
+}
+
+.edge-buttons {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.run-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.start-vertex-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f8fafc;
+}
+
+.start-vertex-selector select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #64748b;
+  background-color: #1e293b;
+  color: #f8fafc;
+}
+
+/* Compact visualization mode */
+.compact-mode .graph-visualizer {
+  grid-template-rows: 80vh minmax(auto, 20vh);
+}
+
+.compact-mode .control-panel {
+  position: relative;
+  max-height: 20vh;
+}
+
+.compact-mode .float-controls {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+}
+
+/* Responsive Design - Landscape Mode */
+@media (min-width: 1024px) {
+  .graph-visualizer {
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 100%;
+  }
+  
+  .graph-container {
+    grid-column: 1;
+    grid-row: 1;
+    height: 100%;
+  }
+  
+  .control-panel {
+    grid-column: 2;
+    grid-row: 1;
+    border-top: none;
+    border-left: 1px solid rgba(59, 130, 246, 0.3);
+    max-height: 100vh;
+    height: 81vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .graph-container {
+    height: 50vh;
+  }
+  
+  .graph-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .vertex-controls, .edge-controls {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .animation-controls {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  
+  .speed-control {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .speed-select {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .algorithm-info {
+    padding: 10px;
+  }
+  
+  .control-panel {
+    max-height: 50vh;
+  }
+  
+  .btn, .animation-controls button {
+    padding: 10px 15px;
+    min-height: 44px; /* Minimum touch target size */
+  }
+  
+  .edge-buttons {
+    margin-top: 5px;
+    width: 100%;
+  }
+  
+  .run-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .start-vertex-selector {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .start-vertex-selector select {
+    flex: 1;
+  }
+}
+
+/* Even smaller screens */
+@media (max-width: 480px) {
+  .graph-container {
+    height: 40vh;
+  }
+  
+  .graph-instructions {
+    font-size: 0.75rem;
+    max-width: 250px;
+  }
+  
+  .vertex-controls, .edge-controls {
+    padding: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .vertex-controls > *, .edge-controls > * {
+    margin-bottom: 5px;
+  }
+} 
