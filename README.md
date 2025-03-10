@@ -40,12 +40,16 @@ A powerful and interactive Data Structures and Algorithms Visualization tool bui
    - **Searching**:
      - Linear Search
      - Binary Search
-     - Depth-First Search
-     - Breadth-First Search
+     - Jump Search
+     - Exponential Search
+     - Interpolation Search
    - **Graph Algorithms**:
      - Dijkstra's Algorithm
-     - A* Pathfinding
+     - Depth-First Search
+     - Breadth-First Search
      - Minimum Spanning Tree
+     - Kruskal's Algorithm
+     - Prim's Algorithm
 
 3. **Advanced Features**:
    - Algorithm Race Mode
@@ -63,7 +67,7 @@ A powerful and interactive Data Structures and Algorithms Visualization tool bui
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/dsa-visualizer.git
+   git clone [https://github.com/yourusername/dsa-visualizer.git](https://github.com/SinghofFury/dsa-visualizer)
    ```
 
 2. Navigate to project directory:
@@ -108,21 +112,61 @@ A powerful and interactive Data Structures and Algorithms Visualization tool bui
 ## 🎨 Project Structure
 
 ```
-dsa-visualizer/
-├── src/
-│   ├── algorithms/        # Algorithm implementations
-│   │   ├── sorting/
-│   │   ├── searching/
-│   │   └── graph.js
-│   ├── components/        # React components
-│   │   ├── visualizers/
-│   │   ├── Navbar.js
-│   │   ├── Sidebar.js
-│   │   └── Visualizer.js
-│   ├── styles/           # CSS modules
-│   └── App.js           # Main application component
-├── public/              # Static assets
-└── package.json        # Project dependencies
+/dsa-visualizer
+├── README.md
+├── .gitignore
+├── .vercelignore
+├── netlify.toml
+├── package-lock.json
+├── package.json
+├── vercel.json
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   └── manifest.json
+└── src/
+    ├── algorithms/
+    │   ├── graph.js
+    │   ├── searching.js
+    │   ├── sorting.js
+    │   ├── searching/
+    │   │   └── index.js
+    │   └── sorting/
+    │       └── index.js
+    ├── App.js
+    ├── components/
+    │   ├── Navbar.js
+    │   ├── Sidebar.js
+    │   ├── Visualizer.js
+    │   └── visualizers/
+    │       ├── AlgorithmRaceVisualizer.js
+    │       ├── BacktrackingVisualizer.js
+    │       ├── DPVisualizer.js
+    │       ├── GraphVisualizer.js
+    │       ├── GreedyVisualizer.js
+    │       ├── MathVisualizer.js
+    │       ├── SearchingVisualizer.js
+    │       ├── SortingVisualizer.js
+    │       └── TreeVisualizer.js
+    ├── index.js
+    ├── reportWebVitals.js
+    └── styles/
+        ├── AlgorithmRaceVisualizer.css
+        ├── App.css
+        ├── BacktrackingVisualizer.css
+        ├── DPVisualizer.css
+        ├── GraphVisualizer.css
+        ├── GreedyVisualizer.css
+        ├── index.css
+        ├── MathVisualizer.css
+        ├── Navbar.css
+        ├── SearchingVisualizer.css
+        ├── Sidebar.css
+        ├── SortingVisualizer.css
+        ├── TreeVisualizer.css
+        └── Visualizer.css
 ```
 
 ## 🤝 Contributing
