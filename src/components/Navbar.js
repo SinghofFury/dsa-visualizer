@@ -9,7 +9,7 @@ const Navbar = () => {
         <span>DSA Visualizer</span>
       </a>
       <div className="navbar-links">
-        <a href="https://github.com/yourusername/dsa-visualizer" className="navbar-github" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/SinghofFury/dsa-visualizer" className="navbar-github" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-github"></i>
           <span>Star on GitHub</span>
         </a>
