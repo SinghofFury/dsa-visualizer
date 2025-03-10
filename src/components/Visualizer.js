@@ -49,24 +49,6 @@ const Visualizer = ({ selectedCategory, selectedAlgorithm, onAlgorithmRunningCha
               <div className="step-text">Customize and run the visualization</div>
             </div>
           </div>
-          
-          <div className="visualizer-animation-placeholder">
-            <div className="placeholder-visualization">
-              <div className="placeholder-bars">
-                {[...Array(10)].map((_, i) => (
-                  <div 
-                    key={i} 
-                    className="placeholder-bar" 
-                    style={{ 
-                      height: `${30 + Math.random() * 120}px`,
-                      '--i': i 
-                    }}
-                  ></div>
-                ))}
-              </div>
-            </div>
-            <div className="placeholder-text">Your algorithm visualization will appear here</div>
-          </div>
         </div>
       );
     }
